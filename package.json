@@ -1,0 +1,31 @@
+{
+  "name": "nodebb-theme-frobox",
+  "version": "0.1.0",
+  "nbbpm": {
+    "compatibility": "^0.7.1"
+  },
+  "description": "frobox theme for NodeBB",
+  "main": "theme.less",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wahack/nodebb-theme-frobox.git"
+  },
+  "keywords": [
+    "nodebb",
+    "theme",
+    "forum",
+    "bootstrap",
+    "responsive"
+  ],
+  "contributors": [
+    {
+      "name": "wahack",
+      "email": "liaoyux@gmail.com",
+      "url": "https://github.com/wahack"
+    }
+  ],
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/psychobunny/nodebb-theme-frobox/issues"
+  }
+}
