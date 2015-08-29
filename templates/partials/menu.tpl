@@ -6,12 +6,13 @@
 					<span class="icon-bar"></span>
 				</button>
 
-				<a href="<!-- IF brand:logo:url -->{brand:logo:url}<!-- ELSE -->{relative_path}/<!-- ENDIF brand:logo:url -->">
-					<img alt="{brand:logo:alt}" class="{brand:logo:display} forum-logo" src="{brand:logo}" />
-				</a>
+				<degrade href="<!-- IF brand:logo:url -->{brand:logo:url}<!-- ELSE -->{relative_path}/<!-- ENDIF brand:logo:url -->">
+					<!-- degrade<img alt="{brand:logo:alt}" class="{brand:logo:display} forum-logo" src="{brand:logo}" /> -->
+				</degrade>
 				<!-- IF showSiteTitle -->
-				<a href="{relative_path}/">
-					<h1 class="navbar-brand forum-title">{title}</h1>
+				<a class="navbar-brand-frobox" href="{relative_path}/">
+					<img alt="{brand:logo:alt}" class="{brand:logo:display} forum-logo" src="{brand:logo}" />
+					<h1 class="navbar-brand forum-title"><!-- {title} -->Frobox</h1>
 				</a>
 				<!-- ENDIF showSiteTitle -->
 
@@ -24,10 +25,11 @@
 				<!-- IF !maintenanceHeader -->
 				<!-- IF loggedIn -->
 
-				<ul id="logged-in-menu" class="nav navbar-nav navbar-right">
+				<ul id="logged-in-menu" class="nav">
 					<li id="user_label" class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="user_dropdown" title="[[global:header.profile]]">
-							<img id="user-header-picture" src="{user.picture}"/> <span id="user-header-name" class="visible-xs-inline">{user.username}</span>
+						<!-- {user.picture} -->
+							<img id="user-header-picture" src="/uploads/system/site-logo.png"/> <span id="user-header-name">{user.username}</span>
 						</a>
 						<ul id="user-control-list" class="dropdown-menu" aria-labelledby="user_dropdown">
 							<li>
@@ -63,7 +65,7 @@
 						</ul>
 					</li>
 				</ul>
-				<ul id="logged-in-menu" class="nav navbar-nav navbar-right">
+				<ul id="logged-in-menu-notes" class="">
 					<li class="notifications dropdown text-center hidden-xs">
 						<a href="#" title="[[global:header.notifications]]" class="dropdown-toggle" data-toggle="dropdown" id="notif_dropdown">
 							<i class="notification-icon fa fa-fw fa-bell-o" data-content="0"></i>
@@ -128,6 +130,8 @@
 					</li>
 				</ul>
 				<!-- ENDIF loggedIn -->
+
+
 				<!-- IF searchEnabled -->
 				<ul class="nav navbar-nav navbar-right">
 					<li>
@@ -189,7 +193,7 @@
 							<!-- ENDIF navigation.iconClass -->
 
 							<!-- IF navigation.text -->
-							<span class="{navigation.textClass}">{navigation.text}</span>
+							<span>{navigation.text}</span>
 							<!-- ENDIF navigation.text -->
 						</a>
 					</li>
