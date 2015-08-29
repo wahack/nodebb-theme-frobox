@@ -29,11 +29,11 @@
 // styling of responsive aspects.
 
 .navbar-header {
-//  &:extend(.clearfix all);
+ &:extend(.clearfix all);
 
-//  @media (min-width: @grid-float-breakpoint) {
-//    float: left;
-//  }
+ @media (min-width: @grid-float-breakpoint) {
+   float: left;
+ }
 }
 
 
@@ -148,10 +148,7 @@
   }
 }
 .navbar-fixed-top {
-  left: 0;
-  right: auto;
-  width: 20%;
-  height: 100%;
+
   top: 0;
   border-width: 0 0 1px;
 }
@@ -272,7 +269,7 @@
     margin: 0;
 
     > li {
-//      float: left;
+     float: left;
       > a {
         padding-top:    @navbar-padding-vertical;
         padding-bottom: @navbar-padding-vertical;
@@ -663,6 +660,6 @@
   }
 }
 
-.navbar-frobox{
-  background-color:#f5f4ef;
-}
+// .navbar-frobox{
+//   background-color:#f5f4ef;
+// }
